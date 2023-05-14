@@ -1,5 +1,5 @@
 /* light mode */
-.light > *{
+.light > * {
     background-color: var(--background-color) !important;
     color: var(--text-color) !important;
 }
@@ -30,6 +30,7 @@ button#theme-toggle {
     border: none;
     font-size: 26px;
     margin: auto 4px;
+    background-color: transparent;
 }
 
 body.dark #moon {
@@ -39,6 +40,14 @@ body.dark #moon {
 
 body:not(.dark) #sun {
     display: none;
+}
+
+body.dark button#theme-toggle #moon {
+    fill: #fff;
+}
+
+body:not(.dark) button#theme-toggle #moon {
+    fill: #000;
 }
 
 body *::selection {
